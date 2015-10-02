@@ -1,5 +1,63 @@
+.navbar-default {
+    background-color: black;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
 .top-container {
-    margin-top: 100px;
+    margin-top: 80px;
+}
+
+.accordion-header {
+    padding-left: 20px;
+}
+
+.col {
+    margin-bottom: 10px;
+}
+
+.col > .message {
+    padding-left: 30px;
+}
+
+.panel-heading {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2fa4d2+0,2fa4d2+0,0484bb+100 */
+    background: #2fa4d2; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJmYTRkMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMmZhNGQyIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA0ODRiYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(top,  #2fa4d2 0%, #2fa4d2 0%, #0484bb 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2fa4d2), color-stop(0%,#2fa4d2), color-stop(100%,#0484bb)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #2fa4d2 0%,#2fa4d2 0%,#0484bb 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #2fa4d2 0%,#2fa4d2 0%,#0484bb 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #2fa4d2 0%,#2fa4d2 0%,#0484bb 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #2fa4d2 0%,#2fa4d2 0%,#0484bb 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2fa4d2', endColorstr='#0484bb',GradientType=0 ); /* IE6-8 */
+}
+
+.panel-title {
+    color: white;
+}
+
+.panel-title > a:hover,a:focus,a:active {
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+.panel-group .panel {
+    margin-top: 2px !important;
+    margin-bottom: 0 !important;
+}
+
+.panel-heading i {
+    font-size: 20px;
+}
+
+.fill-img {
+    background: center center no-repeat;
+    background-size: cover;
 }
 
 /* Bootstrap responsive embeds */

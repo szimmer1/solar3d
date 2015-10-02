@@ -6,7 +6,7 @@
         console.log("Angular didn't load before the script")
     }
 
-    angular.module("app", ["youtube-embed"])
+    angular.module("app", ["youtube-embed", "ui.bootstrap", "ngAnimate"])
 
         .factory("ActiveVideo", [
             function() {
@@ -32,16 +32,39 @@
                 };
                 $scope.steps = [
                     {
-                        header: "Understand the platform",
-                        subtext: "Steps to understand the platform in this video",
+                        header: "Understanding the Platform",
+                        subtext: "Lorem ipsem dolor",
                         videoid: "sMKoNBRZM1M"
                     },
                     {
-                        header: "Understand the tools",
-                        subtext: "Understand the tools",
+                        header: "Using the Tools",
+                        subtext: "Lorem ipsem dolor",
+                        videoid: "18-xvIjH8T4"
+                    },
+                    {
+                        header: "Using the Troubleshooting Chart",
+                        subtext: "Lorem ipsem dolor",
+                        videoid: "18-xvIjH8T4"
+                    },
+                    {
+                        header: "Using the Challenge Mode",
+                        subtext: "Lorem ipsem dolor",
+                        videoid: "18-xvIjH8T4"
+                    },
+                    {
+                        header: "Checking your employees' progress",
+                        subtext: "Lorem ipsem dolor",
+                        videoid: "18-xvIjH8T4"
+                    },
+                    {
+                        header: "The Power of Simulation Based Learning",
+                        subtext: "Lorem ipsem dolor",
                         videoid: "18-xvIjH8T4"
                     }
                 ]
+
+                // hack to get the first accordion to open on load
+                $scope.isopen = true
             }
         ])
 

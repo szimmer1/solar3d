@@ -16,6 +16,9 @@
   "dependencies": {
     "angular-youtube-mb": "~1.1.0",
     "angular": "~1.4.7",
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "angular-bootstrap": "~0.13.4",
+    "angular-animate": "~1.4.7",
+    "components-font-awesome": "~4.4.0"
   }
 }
