@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css" />
     <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <!--<link rel="stylesheet" href="http://dev.solar3dsim.com/css/style.css" />-->
     <link rel="stylesheet" href="css/onboarding-style.css" />
     <!--[if gte IE 9]>
@@ -36,14 +37,14 @@
                 <div class="navbar-header">
                     <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
-                    <a class="navbar-brand" href="#"><img class="img-responsive" src="http://dev.solar3dsim.com/img/logo.png"  alt=" "></a>
+                    <a class="navbar-brand" href="#"><img class="img-responsive navbar-brand-img" src="http://dev.solar3dsim.com/img/logo.png"  alt=" "></a>
                 </div>
                 <div id="my-navbar" class="navbar-collapse collapse">
                     <ul id="top-menu" class="nav navbar-nav navbar-right main_nav">
-                        <li ><a href="#">Login</a></li>
+                        <li ><a href="http://dev.solar3dsim.com">Login</a></li>
                         <!-- <li class="solar"><a href="#">Solar Provider <i class="fa fa-remove"></i></a></li>
                         <li><a href="#">Instructors</a></li> -->
-                        <li><a href="#">Help</a></li>
+                        <li><a href="mailto:ccarter@interplay-learning.com?subject=Questions%20about%20your%20solution">Help</a></li>
                     </ul>
                 </div>
                 <!--/.nav-collapse -->
@@ -57,7 +58,7 @@
     <div class="container top-container" ng-controller="Main">
 
         <div class="row">
-            <div class="col col-md-12 col-xs-12">
+            <div class="col bottom-spaced col-md-12 col-xs-12">
                 <p class="message">
                     Building a strong workforce starts here.<br>
                     Watch these videos and always reach out with questions.
@@ -66,20 +67,29 @@
         </div>
 
         <div class="row">
-            <div class="col col-md-7 col-xs-12">
+            <div class="col bottom-spaced col-md-7 col-xs-12">
                 <div class="embed-responsive embed-responsive-16by9">
                     <youtube-video video-id="steps[activeStep].videoid"></youtube-video>
                 </div>
             </div>
-            <div class="col col-md-5 col-xs-12">
+            <div class="col bottom-spaced col-md-5 col-xs-12">
                 <accordion close-others="1">
                     <accordion-group is-open="isopen" ng-repeat="step in steps track by $index">
                         <accordion-heading><i class="fa" ng-class="{'fa-caret-right':!isopen, 'fa-caret-down':isopen}"></i>
                             <span class="accordion-header">{{step.header}}</span></accordion-heading>
-                        <p>{{step.subtext}}</p>
-                        <button ng-click="setActive($index)">Set Active</button>
+                        <div class="row clickable" ng-click="setActive($index)">
+                            <div class="col col-md-3 col-xs-3 v-center">
+                                <img class="img-responsive" src="{{'img/' + step.imgname}}" />
+                            </div><!--
+                            --><div class="col col-md-9 col-xs-9 v-center">
+                                {{step.subtext}}
+                            </div>
+                        </div>
                     </accordion-group>
                 </accordion>
+                <a href="mailto:ccarter@interplay-learning.com?subject=Questions%20about%20your%20solution" class="btn btn-primary btn-il">
+                    <h4 class="panel-title">Need help? Contact us here</h4>
+                </a>
             </div>
         </div>
 

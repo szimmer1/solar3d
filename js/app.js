@@ -33,33 +33,33 @@
                 $scope.steps = [
                     {
                         header: "Understanding the Platform",
-                        subtext: "Lorem ipsem dolor",
-                        videoid: "sMKoNBRZM1M"
+                        subtext: "Take a Quick Tour of the Platform",
+                        videoid: "_Eu12btpMTc",
+                        imgname: "solar_panel.png"
                     },
                     {
                         header: "Using the Tools",
-                        subtext: "Lorem ipsem dolor",
-                        videoid: "18-xvIjH8T4"
+                        subtext: "Watch How to Use Each Tool",
+                        videoid: "KHmiJGzO9wk",
+                        imgname: "electricity_monitor.png"
                     },
                     {
                         header: "Using the Troubleshooting Chart",
-                        subtext: "Lorem ipsem dolor",
-                        videoid: "18-xvIjH8T4"
+                        subtext: "Learn to Build Troubleshooting Confidence",
+                        videoid: "FlHvhwbDMuI",
+                        imgname: "troubleshooting_chart.png"
                     },
                     {
                         header: "Using the Challenge Mode",
-                        subtext: "Lorem ipsem dolor",
-                        videoid: "18-xvIjH8T4"
+                        subtext: "Learn How to Test Yourself",
+                        videoid: "jtvBKhXII4o",
+                        imgname: "user_progress.png"
                     },
                     {
-                        header: "Checking your employees' progress",
-                        subtext: "Lorem ipsem dolor",
-                        videoid: "18-xvIjH8T4"
-                    },
-                    {
-                        header: "The Power of Simulation Based Learning",
-                        subtext: "Lorem ipsem dolor",
-                        videoid: "18-xvIjH8T4"
+                        header: "The Power of Simulated Learning",
+                        subtext: "Learn the Benefits of a Comprehensive Learning Plan",
+                        videoid: "hRz1kxH4whk",
+                        imgname: "simulated_ebox.png"
                     }
                 ]
 
