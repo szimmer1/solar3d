@@ -8,27 +8,15 @@
 
     angular.module("app", ["youtube-embed", "ui.bootstrap", "ngAnimate"])
 
-        .factory("ActiveVideo", [
-            function() {
-                var active = {};
-                return {
-                    set: function(id) {
-                        if (id) {
-                            active.id = id
-                        }
-                    },
-                    active: active
-                }
-            }
-        ])
-
         .controller("Main", [
             "$scope",
-            "ActiveVideo",
-            function($scope, ActiveVideo) {
+            "$window",
+            function($scope, $window) {
+                $scope.message = true;
                 $scope.activeStep = 0;
                 $scope.setActive = function(id) {
                     $scope.activeStep = id;
+                    $window.scroll(0,0);
                 };
                 $scope.steps = [
                     {
