@@ -57,3 +57,25 @@
         ])
 
 })(angular);
+
+
+function permutationsIter(word) {
+    if (word && word.length < 2) return word;
+    var setUpToI = [];
+    for (var i = 0; i < word.length; i++) {
+        setUpToI.push(word.charAt(i));
+    }
+    var nextSet = [];
+    for (var i = 1; i < word.length; i++) {
+        for (var j = 0; j < setUpToI.length; j++) {
+            for (var h = 0; h < word.length; h++) {
+                if (setUpToI[j].indexOf(word[h]) < 0) { //remaining chars: "bcd"
+                    nextSet.push(setUpToI[j] + word[h]);
+                }
+            }
+        }
+        setUpToI = nextSet;
+        nextSet = [];
+    }
+    return setUpToI;
+}
