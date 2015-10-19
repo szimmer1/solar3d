@@ -77,16 +77,17 @@
             </div>
             <div class="col bottom-spaced col-md-5 col-xs-12">
                 <accordion close-others="1">
-                    <accordion-group is-open="isopen" ng-repeat="step in steps track by $index">
+                    <accordion-group is-open="isopen" ng-repeat="step in steps">
                         <accordion-heading><i class="fa" ng-class="{'fa-caret-right':!isopen, 'fa-caret-down':isopen}"></i>
                             <span class="accordion-header">{{step.header}}</span></accordion-heading>
-                        <div ng-repeat="video in step.videos" class="row clickable" ng-click="setActive(video.videoid)">
+                        <div ng-repeat="video in step.videos track by $index" class="row clickable nested-row" ng-click="setActive(video.videoid)">
                             <div class="col col-md-3 col-xs-3 v-center">
                                 <img class="img-responsive" src="{{'img/' + video.imgname}}" />
                             </div><!--
                             --><div class="col col-md-9 col-xs-9 v-center">
                                 {{video.subtext}}
                             </div>
+                            <hr ng-if="$index < step.videos.length - 1">
                         </div>
                     </accordion-group>
                 </accordion>
