@@ -12,44 +12,77 @@
             "$scope",
             "$window",
             function($scope, $window) {
-                $scope.message = true;
-                $scope.activeStep = 0;
-                $scope.setActive = function(id) {
-                    $scope.activeStep = id;
-                    $window.scroll(0,0);
-                };
                 $scope.steps = [
                     {
-                        header: "Understanding the Platform",
-                        subtext: "Take a Quick Tour of the Platform",
-                        videoid: "_Eu12btpMTc",
-                        imgname: "solar_panel.png"
+                        header: "The Platform",
+                        videos: [
+                            {
+                                subtext: "Understanding the Platform",
+                                videoid: "nZ3Re-5WFrQ",
+                                imgname: "solar_panel.png"
+                            },
+                            {
+                                subtext: "The Power of Simulated Learning",
+                                videoid: "WaKcapO84Bo",
+                                imgname: "simulated_ebox.png"
+                            }
+                        ]
                     },
                     {
-                        header: "Using the Tools",
-                        subtext: "Watch How to Use Each Tool",
-                        videoid: "KHmiJGzO9wk",
-                        imgname: "electricity_monitor.png"
+                        header: "Foundations Course",
+                        videos: [
+                            {
+                                subtext: "The Solar Foundations Course",
+                                videoid: "DmLFWgTr_kE",
+                                imgname: "Solar Foundations Thumbnail.png"
+                            }
+                        ]
                     },
                     {
-                        header: "Using the Troubleshooting Chart",
-                        subtext: "Learn to Build Troubleshooting Confidence",
-                        videoid: "FlHvhwbDMuI",
-                        imgname: "troubleshooting_chart.png"
+                        header: "The Operations and Maintenance Simulation",
+                        videos: [
+                            {
+                                subtext: "The Learning Path",
+                                videoid: "4hH9723yO3Y",
+                                imgname: "Learning Path Thumbnail.png"
+                            },
+                            {
+                                subtext: "Using the Tools",
+                                videoid: "wQNf0bBLZ64",
+                                imgname: "electricity_monitor.png"
+                            },
+                            {
+                                subtext: "Using the Toubleshooting Chart",
+                                videoid: "GJTilhwNbGU",
+                                imgname: "Thumbnail Troubleshooting.png"
+                            },
+                            {
+                                subtext: "Playing the Challenge Mode",
+                                videoid: "EM3Pwy3PMVY",
+                                imgname: "Challenge Thumbnail.png"
+                            }
+                        ]
                     },
                     {
-                        header: "Using the Challenge Mode",
-                        subtext: "Learn How to Test Yourself",
-                        videoid: "jtvBKhXII4o",
-                        imgname: "user_progress.png"
-                    },
-                    {
-                        header: "The Power of Simulated Learning",
-                        subtext: "Learn the Benefits of a Comprehensive Learning Plan",
-                        videoid: "hRz1kxH4whk",
-                        imgname: "simulated_ebox.png"
+                        header: "The Solar Sales Course",
+                        videos: [
+                            {
+                                subtext: "The Solar Sales Course",
+                                videoid: "YtyZvBemGwY",
+                                imgname: "Sales Thumbnail.png"
+                            }
+                        ]
                     }
-                ]
+                ];
+
+
+                $scope.message = true;
+                $scope.activeId = $scope.steps[0].videos[0].videoid;
+                $scope.setActive = function(videoId) {
+                    $scope.activeId = videoId;
+                    $window.scroll(0,0);
+                };
+
 
                 // hack to get the first accordion to open on load
                 $scope.isopen = true
@@ -57,25 +90,3 @@
         ])
 
 })(angular);
-
-
-function permutationsIter(word) {
-    if (word && word.length < 2) return word;
-    var setUpToI = [];
-    for (var i = 0; i < word.length; i++) {
-        setUpToI.push(word.charAt(i));
-    }
-    var nextSet = [];
-    for (var i = 1; i < word.length; i++) {
-        for (var j = 0; j < setUpToI.length; j++) {
-            for (var h = 0; h < word.length; h++) {
-                if (setUpToI[j].indexOf(word[h]) < 0) { //remaining chars: "bcd"
-                    nextSet.push(setUpToI[j] + word[h]);
-                }
-            }
-        }
-        setUpToI = nextSet;
-        nextSet = [];
-    }
-    return setUpToI;
-}

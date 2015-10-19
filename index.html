@@ -72,7 +72,7 @@
         <div class="row">
             <div class="col bottom-spaced col-md-7 col-xs-12">
                 <div class="embed-responsive embed-responsive-16by9 video-border">
-                    <youtube-video video-id="steps[activeStep].videoid"></youtube-video>
+                    <youtube-video video-id="activeId"></youtube-video>
                 </div>
             </div>
             <div class="col bottom-spaced col-md-5 col-xs-12">
@@ -80,12 +80,12 @@
                     <accordion-group is-open="isopen" ng-repeat="step in steps track by $index">
                         <accordion-heading><i class="fa" ng-class="{'fa-caret-right':!isopen, 'fa-caret-down':isopen}"></i>
                             <span class="accordion-header">{{step.header}}</span></accordion-heading>
-                        <div class="row clickable" ng-click="setActive($index)">
+                        <div ng-repeat="video in step.videos" class="row clickable" ng-click="setActive(video.videoid)">
                             <div class="col col-md-3 col-xs-3 v-center">
-                                <img class="img-responsive" src="{{'img/' + step.imgname}}" />
+                                <img class="img-responsive" src="{{'img/' + video.imgname}}" />
                             </div><!--
                             --><div class="col col-md-9 col-xs-9 v-center">
-                                {{step.subtext}}
+                                {{video.subtext}}
                             </div>
                         </div>
                     </accordion-group>
